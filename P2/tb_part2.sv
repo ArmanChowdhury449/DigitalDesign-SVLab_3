@@ -59,7 +59,7 @@ localparam int PROG_LEN =100;
 
 // Comment (2c) Add Contraint 2 here: Using the implication operator ->, define a constraint named small_operands 
 // which will constrain, “If a and b are both small (<25), then the opcode is changed to ADD”.
- constraint small_operands {(a < 25) && (b < 25) -> opcode = 4'b0001;}
+ constraint small_operands {(a < 25) && (b < 25) -> opcode == 4'b0001;}
 
 
 // Comment (2d) Write a soft constraint that b should be greater than a and can be overridden 
